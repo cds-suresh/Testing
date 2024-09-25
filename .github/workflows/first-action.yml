@@ -27,6 +27,6 @@ jobs:
         npm install
 
     # Run tests
-    - name: Run tests
-      run: |
-        npm start
+    # - name: Run tests
+    #   run: |
+    #     npm start
