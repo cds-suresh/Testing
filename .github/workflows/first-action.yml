@@ -1,0 +1,32 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    # Check out the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Node.js with matrix version
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    # Install dependencies
+    - name: Install dependencies
+      run: |
+        npm install
+
+    # Run tests
+    - name: Run tests
+      run: |
+        npm test
