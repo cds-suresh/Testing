@@ -16,7 +16,7 @@ var mailOptions = {
     from: 'suresh,p1898@gmail.com',
     to: 'sureshapp7994+100@gmail.com,suresh.p1898@gmail.com',
     subject: 'Sending Email using Node.js',
-    text: 'That was easy aadedd!'
+    text: 'That was easy aadedd! email sent'
 };
 
 transporter.sendMail(mailOptions, function (error, info) {
